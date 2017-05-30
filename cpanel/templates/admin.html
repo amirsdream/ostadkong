@@ -1,0 +1,74 @@
+{% extends 'main1.html' %}
+{% block content %}
+{%load staticfiles%}
+
+      <div class="page-content">
+        <div class="content container">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="page-title">داشبورد <small>محاسبات و غیره</small></h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row">
+              <div class="col-md-3 col-xs-12 col-sm-6"> <a href="#}" class="stats-container">
+                  <div class="stats-heading">سفارش ها</div>
+                  <div  id="rating"  class="stats-body-alt"> 
+                    <!--i class="fa fa-bar-chart-o"></i-->
+                  <div  class="text-center"><span class="text-top"></span>1</div>
+                    <small>سفارش های جدید</small> </div>
+                  <div class="stats-footer">مدیریت سفارش ها</div>
+
+                  </a> </div>
+                <div class="col-md-3 col-xs-12 col-sm-6"> <a href="#" class="stats-container">
+                  <div class="stats-heading">فروش</div>
+                  <div class="stats-body-alt"> 
+                    <!--i class="fa fa-bar-chart-o"></i-->
+                    <div class="text-center"><span class="text-top">$</span>1</div>
+                    <small> هزار تومان</small> </div>
+                  <div class="stats-footer">اطلاعات بیشتر</div>
+                  </a> </div>
+                <div class="col-md-3 col-xs-12 col-sm-6"> <a href="#" class="stats-container">
+                  <div class="stats-heading">تعداد غذا</div>
+                  <div class="stats-body-alt"> 
+                    <!--i class="fa fa-bar-chart-o"></i-->
+                    <div class="text-center"><span class="text-top"></span>1</div>
+                    <small>نوع غذا</small> </div>
+                  <div class="stats-footer">برو به لیست غذا ها</div>
+                  </a> </div>
+                <div class="col-md-3 col-xs-12 col-sm-6"> <a href="#" class="stats-container">
+                  <div class="stats-heading">اعضا</div>
+                  <div class="stats-body-alt"> 
+                    <!--i class="fa fa-bar-chart-o"></i-->
+                    <div class="text-center"><span class="text-top"></span>1</div>
+                    <small>اعضای جدید</small> </div>
+                  <div class="stats-footer">مدیریت کاربر</div>
+                  </a> </div>
+                
+              </div>
+            </div>
+          </div>
+            <div class="row">
+            <div class="col-lg-12">
+              <div class="widget">
+                <div class="widget-header"> <i class="icon-warning-sign "></i>
+                  <h3>پیام ها </h3>
+                  </div>
+                    <div class="widget-content">
+        			       <div class="panel-body">
+                        <div class="alert alert-success alert-block fade in">
+                          <button type="button" class="close close-sm" data-dismiss="alert"> <i class="icon-remove"></i> </button>
+                          <h4> <i class="icon-ok-sign"></i> موفقیت! </h4>
+                          <p>این یک پیام صحیح است و وقتی کاری با موفقیت به اتمام می رسد، نمایش داده می شود...</p>
+                        </div>
+                        
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+{% endblock %}

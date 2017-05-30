@@ -1,0 +1,300 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+
+	<!--================ HEADER ================-->
+	<div class="preloader"></div>
+	<header class="malto-head">
+		<div class="head-bar">
+			<div class="container">
+				<div class="col-md-4 col-sm-4col-xs-4">
+				<!--	<img src="{% static 'img/Full-logo.png' %}"  alt="">-->
+				</div>
+				<div class="col-md-8 col-sm-8 col-xs-8">
+					<nav class="menu">
+						<i class="material-icons hidden-lg">منو</i>
+						<ul class="hidden visible-lg">
+							<!-- Change links -->
+							<!-- Example: <li class="menu-element"><a href="my-site.com">features</a></li> -->
+							<li class="menu-element"><a href="{% url 'main' %}">صفحه اصلی</a></li>
+							<li class="menu-element"><a href="#team">شعر</a></li>
+							<li class="menu-element"><a href="#prices">عکس</a></li>
+							<!--<li class="menu-element"><a href="#services">خدمات</a></li>
+							<li class="menu-element"><a href="#contacts">تماس ها</a></li>
+							<li class="menu-element"><a href="#stats">آمار</a></li>
+							<li class="menu-element"><a href="#reviews">نقد و بررسی</a></li>
+							<li class="menu-element"><a href="#partners">همکاران</a></li>-->
+							
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="empty"></div>
+		<section id="features">
+		<div class="head-elements">
+			<div class="container">
+				<h1>به سایت شعر صالح استاد کنگ خوش آمدید.</h1>
+				<!--<h2>برای پیشرفت کاری رو که بلدی همیشه انجام نده!</h2>
+				 <!--<div  class="col-sm-7 wow fadeInRight" data-wow-duration="700ms">
+				 <img src="{% static 'img/png_butterfly_elegance__oceanic__by_ucurmi-d5nxeec.png' %}"  alt="">
+				 </div>
+				<div class="malto-btn" id="learn-btn"><a href="#features">بیشتر بدانید</a></div>
+				<div class="malto-btn accent"><a href="#features">خرید قالب</a></div>-->
+			</div>
+		</div>
+		</section>
+	</header>
+	<!--================ MOBILE MENU ================-->
+	<nav class="mobile-menu hidden-lg">
+		<ul>
+			<li class="menu-element"><a href="#features">صفحه اصلی</a></li>
+			<li class="menu-element"><a href="#team">شعر</a></li>
+			<li class="menu-element"><a href="#prices">عکس</a></li>
+			<!--<li class="menu-element"><a href="#services">خدمات</a></li>
+			<li class="menu-element"><a href="#contacts">تماس ها</a></li>
+			<li class="menu-element"><a href="#stats">آمار</a></li>
+			<li class="menu-element"><a href="#reviews">نقد و بررسی</a></li>
+			<li class="menu-element"><a href="#partners">همکاران</a></li>-->
+			
+		</ul>
+	</nav>
+	<section id="team" class="service">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="main_service_area">
+						<div class="main_service_content">
+
+							<div class="service_tabe">
+
+
+								<!-- Tab panes -->
+								<div class="tab-content">
+
+									<div role="tabpanel" class="tab-pane active" id="webdesign">
+
+										<div class="single_service_tab">
+											<div class="head_title">
+												<h3>شعر</h3>
+												<div class="separator"></div>
+											</div>
+											<div class="row">
+												<div class="col-sm-4">
+													<div class="single_tab_content">
+														<img class="right-top" src="{% static 'assets/images/png_butterfly_elegance__corner__by_ucurmi-d5nxfvc.png' %}" >
+
+														<h3>{{poem.title}}</h3>
+
+														<p>{{poem.text|safe}}</p>
+														{% if poem.sound %}
+			                                              <audio autobuffer autoloop loop controls>
+			                                                <source src="{{poem.sound.url}}">
+			                                                <object type="audio/mp3" data="{{poem.sound.url}}" width="290" height="45">
+			                                                  <param name="autoplay" value="false">
+			                                                  <param name="autoStart" value="0">
+			                                                  <p><a href="{{poem.sound.url}}">دانلود کنیدz.</a></p>
+			                                                </object>
+			                                              </audio>
+			                                              {%endif%}
+														<img class="right-bottom" src="{% static 'assets/images/png_butterfly_elegance__simple___by_ucurmi-d5nxg2z.png' %}" >
+
+
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<img class="right-Middle" src="{% static 'assets/images/png_butterfly_elegance__simple__by_ucurmi-d5nxfk7.png' %}" >
+													<img class="left-Middle" src="{% static 'assets/images/png_butterfly_elegance__simple__by_ucurmi-d5nxfk7up.png' %}" >
+												</div>
+												<div class="col-sm-4">
+													<div class="single_tab_content">
+														<img class="left-top" src="{% static 'assets/images/png_butterfly_elegance__corner__by_ucurmi-d5nxfvc.png' %}" >
+														<h3>{{poem.title}}</h3>
+														<p>{{poem.text|safe}} </p>
+														{% if poem.sound %}
+			                                              <audio autobuffer autoloop loop controls>
+			                                                <source src="{{poem.sound.url}}">
+			                                                <object type="audio/mp3" data="{{poem.sound.url}}" width="290" height="45">
+			                                                  <param name="autoplay" value="false">
+			                                                  <param name="autoStart" value="0">
+			                                                  <p><a href="{{poem.sound.url}}">دانلود کنیدz.</a></p>
+			                                                </object>
+			                                              </audio>
+			                                              {%endif%}
+														<img class="left-bottom" src="{% static 'assets/images/png_butterfly_elegance__simple___by_ucurmi-d5nxg2z.png' %}" >
+
+														
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--<section id="team" class="team">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="main_team sections">
+						<div class="row">
+							<div class="head_title head_entekhab-sheer ">
+								<h3>انتخاب شعر</h3>
+								<div class="separator"></div>
+							</div>
+
+							<div class="form-group">
+								<label for="continent" class="control-label">انتخاب شعر</label>
+								<select name="continent" size="1" class="form-control">
+									<option selected> شعر را انتخاب کنید...</option>
+									<option value="afr">خونیخمیرش</option>
+									<option value="afr">بی دعوت</option>
+									<option value="afr">ورغار ناتام</option>
+									<option value="afr">کاش</option>
+									<option value="afr">راه باریک</option>
+									<option value="afr">البدر</option>
+									<option value="afr">شمد سرشون</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>-->
+
+
+	<section >
+		<div class="fasele">
+		</div>
+	</section>
+
+
+
+
+
+	<section id="prices" class="portfolio lightbg">
+		<div class="container">
+				<div class="main_about_area sections">
+					<div class="col-sm-12">
+                       <div class="row">
+                           <div  class="col-sm-7 wow fadeInRight" data-wow-duration="700ms">
+								<div class="single_about_right_content">
+									<div class="head_title">
+										<h3>عکس ها</h3>
+										<div class="separator"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+		<div class="bg-images ">
+			<div class="height">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="main_counter_area text-center">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	
+
+	<!--================ CONTACTS ================--
+	<section id="contacts">
+		<div class="container">
+			<h4>تماس با ما</h4>
+			<div class="contact-items">
+				<div class="item col-md-3 col-sm-6 col-xs-12">
+					<span class="icon-wrap">
+						<!-- Change the icon --
+						<i class="material-icons">place</i>
+					</span>
+					<span>کارنی، نبراسکا، ایالات متحده</span>
+				</div>
+				<div class="item col-md-3 col-sm-6 col-xs-12">
+					<span class="icon-wrap">
+						<!-- Change the icon --
+						<i class="material-icons">phone_iphone</i>
+					</span>
+					<span>+0 123 456 789</span>
+				</div>
+				<div class="item col-md-3 col-sm-6 col-xs-12">
+					<span class="icon-wrap">
+						<!-- Change the icon --
+						<i class="material-icons">email</i>
+					</span>
+					<span>alustademail@gmail.com</span>
+				</div>
+				<div class="item col-md-3 col-sm-6 col-xs-12">
+					<span class="icon-wrap">
+						<!-- Change the icon --
+						<i class="material-icons">language</i>
+					</span>
+					<span>RTL-Theme.com</span>
+				</div>
+			</div>
+			<form class="malto-form" action="mail.php" method="POST">
+				<div class="col-md-6">
+					<input type="text" placeholder="نام" name="name" required><br>
+					<input type="email" placeholder="ایمیل" name="email" required>
+				</div>
+				<div class="col-md-6">
+					<textarea rows="4" placeholder="پیام" name="message" required></textarea>
+				</div>
+				<div class="col-md-12">
+					<button id="form-btn" class="malto-btn accent">ارسال پیام</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<!-- Google map 
+	<div id="map"></div>
+	<script type="text/javascript">
+		'use strict';
+		function initMap() {
+			var mapDiv = document.getElementById('map');
+			var map = new google.maps.Map(mapDiv, {
+				//Type here your coordinates
+				center: {lat: 40.7, lng: -99.08},
+				//Type here the zoom level
+				zoom: 15,
+				scrollwheel: false,
+				styles: [{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#e9e5dc"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"poi.medical","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"poi.sports_complex","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54},{"visibility":"off"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"water","elementType":"all","stylers":[{"saturation":43},{"lightness":-11},{"color":"#89cada"}]}]
+			});
+		}
+	</script>-->
+
+	<!--================ FOOTER ================-->
+	<footer class="malto-foot">
+		<div class="first-level">
+			<p>توسعه طراح وب-توسط آموزشگاه ثمر</p>
+			<a href=""><i class="fa fa-facebook"></i></a>
+			<a href=""><i class="fa fa-twitter"></i></a>
+			<a href=""><i class="fa fa-google-plus"></i></a>
+		</div>
+		<div class="second-level">
+			<p>کپی رایت 2016. کلیه حقوق محفوظ است</p>
+		</div>
+	</footer>
+	<div class="hidden"></div>
+
+{% endblock %}

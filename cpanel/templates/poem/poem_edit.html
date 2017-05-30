@@ -1,0 +1,33 @@
+{% extends 'main1.html' %}
+{% block content %}
+{%load staticfiles%}
+<div class="page-content">
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="page-title">شعر</h2>
+        </div>
+        <div class="col-md-12">
+          <div class="widget">
+            <div class="widget-header"> <i class="icon-tasks"></i>
+              <h3>حذف و ادیت اشعار</h3>
+            </div>
+            <div class="widget-content">
+              <div id="examples" class="section examples-section">
+              {% for i in object_list%}
+                <div class="col-sm-4 col-md-2">
+                 <span>{{i.title|truncatechars:15}}</span>
+                  <div class="image-row">
+                    <div class="image-set"> <a class="example-image-link" href="{% url 'update_poem' pk=i.pk %}" data-lightbox="example-set" title="Click on the right side of the image to move forward."> <img class="example-image" src="{{i.image.url}}" alt="Plants: image 1 0f 4 thumb" width="150" height="150"/></a> </div>
+                  </div>
+                </div>
+              {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      
+{% endblock %}

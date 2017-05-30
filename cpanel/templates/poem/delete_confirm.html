@@ -1,0 +1,18 @@
+{% extends 'main1.html' %}
+{% block content %}
+{%load staticfiles%}
+ <div class="page-content">
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="page-title">اسلایدر حذف</h2>
+        </div>
+        <form action="" method="post">{% csrf_token %}
+		    <p>ایا از حذف شعر  "{{ object.title }}" مطمئن هستید ?</p>
+		    <input class="btn btn-danger" type="submit" value="بله" />
+		    <input class="btn btn-primary" type="submit" name="cancel" value="لغو" /> 
+		</form>
+        </div>
+    </div>
+</div>
+{% endblock %}

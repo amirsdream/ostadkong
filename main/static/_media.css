@@ -1,0 +1,573 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px) {
+
+	h4 {
+		font-size: 30px;
+	}
+
+	#services,
+	#prices {
+		padding: 25px 0px;
+	}
+
+	.malto-btn a,
+	.malto-btn-flat a,
+	#form-btn {
+		font-size: 11px;
+	}
+
+	/* ------------- HEADER ------------- */
+	.head-bar img {
+		width: 75%;
+	}
+	.menu-element {
+		display: block;
+		margin: 0;
+		padding: 15px 0px;
+	}
+
+	.menu-element a {
+		padding: 15px 50px 15px 120px;
+	}
+
+	/* ------------- PRICES(CARDS) ------------- */
+	.price-title span,
+	.price-title-accent span {
+		font-size: 32px;
+	}
+
+	.price-title p,
+	.price-title-accent p {
+		font-size: 12px;
+	}
+
+	.price-content li{
+		font-size: 13px;
+	}
+
+	/* ------------- CONTACTS ------------- */
+	.icon-wrap {
+		width: 33px;
+		height: 33px;
+	}
+
+	.contact-items i {
+		font-size: 16px;
+		margin-top: 8px;
+	}
+
+	.contact-items span {
+		font-size: 13px;
+	}
+
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+	h1 {
+		font-size: 40px;
+	}
+
+	/* ------------- HEADER ------------- */
+	.head-bar img {
+		width: 95%;
+	}
+
+
+	/* ------------- FEATURES ------------- */
+	.item-descr {
+		margin-bottom: 30px;
+	}
+
+	/* ------------- PRICES(CARDS) ------------- */
+	.price-card {
+		margin: 50px 100px;
+	}
+
+	.price-card:hover {
+		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	}
+
+	/* ------------- PARTNERS ------------- */
+	#partners img {
+		width: 70%;
+		height: auto;
+	}
+
+	/* ------------- CONTACTS ------------- */
+	.contact-items .item {
+		margin-top: 20px;
+	}
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+	h1 {
+		font-size: 36px;
+	}
+
+	h2 {
+		font-size: 14px;
+	}
+
+	.malto-btn a,
+	.malto-btn-flat a,
+	#form-btn {
+		width: 150px;
+		padding: 12px 0px;
+		font-size: 11px;
+	}
+
+	/* ------------- HEADER ------------- */
+	.head-bar img {
+		width: 105%;
+	}
+
+	/* ------------- FEATURES(ITEMS) ------------- */
+	.item-descr {
+		padding: 0px 40px;
+		margin-bottom: 40px;
+	}
+
+	/* ------------- STATS ------------- */
+	#stats {
+		padding-top: 45px;
+	}
+
+	#stats i {
+		margin-top: 30px;
+	}
+
+	#stats p {
+		margin-top: 0px;
+	}
+
+	/* ------------- PRICES(CARDS) ------------- */
+	.price-card {
+		margin: 50px 40px;
+	}
+
+	/* ------------- TEAM(CARDS) ------------- */
+	.member {
+		margin: 50px 20px;
+	}
+
+	.member-info span {
+		font-size: 16px;
+	}
+
+	.member-info i {
+		font-size: 14px;
+	}
+
+	.meber-info p {
+		font-size: 13px;
+	}
+
+	.member-contacts {
+		font-size: 16px;
+	}
+
+	/* ------------- REVIEWS(SLIDER) ------------- */
+	.review {
+		padding: 0px 30px;
+	}
+
+	.review span {
+		font-size: 15px;
+	}
+
+	.review i {
+		font-size: 14px;
+	}
+
+	.review p {
+		font-size: 13px;
+	}
+
+	/* ------------- PARTNERS ------------- */
+	#partners img {
+		width: 50%;
+		height: auto;
+	}
+
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+
+}
+
+/* Custom */
+@media only screen and (max-width : 700px) {
+	/* ------------- HEADER ------------- */
+	.head-bar img {
+		width: 130%;
+	}
+
+	/* ------------- TEAM(CARDS) ------------- */
+	.member {
+		margin: 50px 0px;
+	}
+
+	/* ------------- CONTACTS ------------- */
+	.icon-wrap {
+		width: 33px;
+		height: 33px;
+	}
+
+	.contact-items i {
+		font-size: 16px;
+		margin-top: 8px;
+	}
+
+	.contact-items span {
+		font-size: 12px;
+	}
+
+	*::-webkit-input-placeholder {
+		font-family: "Yekan",Num, sans-serif;
+		font-size: 12px;
+		letter-spacing: 0;
+	}
+	*:-moz-placeholder {
+		font-family: "Yekan",Num, sans-serif;
+		font-size: 12px;
+		letter-spacing: 0;
+	}
+	*::-moz-placeholder {
+		font-family: "Yekan",Num, sans-serif;
+		font-size: 12px;
+		letter-spacing: 0;
+	}
+	*:-ms-input-placeholder {
+		font-family: "Yekan",Num, sans-serif;
+		font-size: 12px;
+		letter-spacing: 0;
+	}
+
+	.contact-items input,
+	.contact-items textarea {
+		font-size: 12px;
+	}
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+	.head-elements {
+		text-transform: uppercase;
+	}
+
+	h1 {
+		font-size: 16px;
+		font-family: "Yekan",Num, sans-serif;
+	}
+
+	h2 {
+		font-size: 10px;
+	}
+
+	.malto-btn a,
+	.malto-btn-flat a,
+	#form-btn {
+		width: 130px;
+		padding: 13px 0px;
+		font-size: 9px;
+	}
+
+	/* ------------- HEADER ------------- */
+	.head-bar img {
+		width: 200%;
+	}
+
+	/* ------------- FEATURES(ITEMS) ------------- */
+	#features {
+		padding: 40px 0px;
+	}
+
+	#features img {
+		width: 12%;
+		height:auto;
+	}
+
+	.item-descr {
+		padding: 0px 0px;
+		font-size: 11px;
+	}
+
+	h3 {
+		font-size: 14px;
+	}
+
+	/* ------------- SERVICES(TABS) ------------- */
+	h4 {
+		font-size: 28px;
+	}
+
+	.tab-content {
+		text-align: right;
+	}
+
+	.nav-tabs > li > a {
+		padding: 15px 0px;
+		width: 116px;
+		font-size: 10px;
+	}
+
+	.tab-title {
+		margin-top: 30px;
+	}
+
+	.tab-title span {
+		font-size: 14px;
+	}
+
+	.tab-descr p,
+	.tab-descr li {
+		font-size: 12px;
+	}
+
+	.tab-descr li {
+		margin-top: 25px;
+	}
+
+	.tab-features {
+		list-style-image: none;
+	}
+
+	/* ------------- STATS ------------- */
+	#stats i {
+		font-size: 36px;
+	}
+
+	#stats span {
+		font-size: 28px;
+	}
+
+	#stats p {
+		font-size: 12px;
+	}
+
+	/* ------------- PRICES(CARDS) ------------- */
+	.price-card {
+		margin: 30px 0px;
+	}
+
+	/* Disabling shadow animations on mobile versions */
+	.price-card:hover {
+		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	}
+
+	/* ------------- TEAM(CARDS) ------------- */
+	.member {
+		margin: 50px 20px;
+		margin-bottom: 5px;
+	}
+
+	/* Disabling shadow animations on mobile versions */
+	.member:hover {
+		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	}
+
+	.owl-wrapper-outer {
+		padding-bottom: 0px;
+	}
+
+	/* ------------- REVIEWS(SLIDER) ------------- */
+	.review {
+		padding: 0px 0px;
+	}
+
+	/* ------------- PARTNERS ------------- */
+	#partners img {
+		width: 70%;
+		height: auto;
+	}
+
+	/* ------------- CONTACTS ------------- */
+	#contacts {
+		padding: 30px 0px;
+	}
+
+	.contact-items {
+		margin-top: 0px;
+	}
+
+	/* ------------- FOOTER ------------- */
+	.first-level {
+		padding: 20px 0px;
+	}
+
+}
+
+/* Custom, iPhone 6 */
+@media only screen and (max-width : 375px) {
+	h1 {
+		font-size: 15px;
+		font-family: "Yekan",Num, sans-serif;
+	}
+	h2 {
+		font-size: 10px;
+	}
+
+	.malto-btn a,
+	.malto-btn-flat a,
+	#form-btn {
+		width: 110px;
+		padding: 11px 0px;
+		font-size: 8px;
+	}
+
+	/* ------------- HEADER ------------- */
+	.head-bar img {
+		width: 300%;
+	}
+
+	/* ------------- SERVICES(TABS) ------------- */
+	h4 {
+		font-size: 24px;
+	}
+
+	.nav-tabs {
+		margin-top: 25px;
+	}
+
+	.nav-tabs > li > a {
+		padding: 15px 0px;
+		width: 108px;
+		font-size: 8px;
+	}
+
+	.tab-title span {
+		font-size: 12px;
+	}
+
+	.tab-descr p,
+	.tab-descr li {
+		font-size: 10px;
+	}
+
+	/* ------------- PRCIES(CARDS) ------------- */
+	.price-title span,
+	.price-title-accent span {
+		font-size: 28px;
+	}
+
+	.price-title p,
+	.price-title-accent p {
+		font-size: 11px;
+	}
+
+	/* ------------- TEAM(CARDS) ------------- */
+	.member {
+		margin: 50px 0px;
+		margin-bottom: 5px;
+	}
+
+	.member-info span {
+		font-size: 16px;
+	}
+
+	.member-info i {
+		font-size: 14px;
+	}
+
+	.meber-info p {
+		font-size: 13px;
+	}
+
+	/* ------------- PARTNERS ------------- */
+	#partners {
+		padding: 30px 0px;
+	}
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	h1 {
+		font-size: 12px;
+		font-family: "Yekan",Num, sans-serif;
+	}
+	h2 {
+		font-size: 8px;
+	}
+
+
+	/* ------------- SERVICES(TABS) ------------- */
+	h4 {
+		font-size: 22px;
+	}
+
+	.nav-tabs > li > a {
+		width: 96px;
+		font-size: 8px;
+	}
+
+	.tab-title span {
+		font-size: 12px;
+	}
+
+	.tab-descr p,
+	.tab-descr li {
+		font-size: 10px;
+	}
+
+	/* ------------- PRICES(CARDS) ------------- */
+	.price-content li {
+		font-size: 12px;
+	}
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

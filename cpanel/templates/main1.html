@@ -1,0 +1,56 @@
+{% extends 'base1.html' %}
+{% block body %}
+{%load staticfiles%}
+<div class="container">
+  <div id="post_ref" class="top-navbar header b-b"> <a data-original-title="Toggle navigation" class="toggle-side-nav pull-left" href="#"><i class="icon-reorder"></i> </a>
+    <div class="brand pull-right"> <a href="{% url 'cpanel' %}"><img src="{% static 'admin/images/logo.png' %}" width="147" height="33"></a></div>
+    <ul class="nav navbar-nav navbar-left  hidden-xs">
+
+         <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> <i class="icon-envelope"></i> <span class="badge"></span> </a>
+        <ul class="dropdown-menu extended notification">
+          <li class="title">
+            <p>شما سفارش جدید دارید</p>
+          </li>
+     
+        
+          <li class="footer"> <a href="#">نمایش تمام پیام ها</a> </li>
+        </ul>
+      </li>
+      <li class="dropdown user  hidden-xs"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> <i class="icon-male"></i> <span class="username">{{ user.get_username }}</span> <i class="icon-caret-down small"></i> </a>
+        <ul class="dropdown-menu">
+          <li><a href="#" > <i class="icon-user"></i> پروفایل من</a></li>
+          <li><a href="fullCalendar.html"><i class="icon-calendar"></i> تقویم من</a></li>
+          <li><a href="#"><i class="icon-tasks"></i> وظایف من</a></li>
+          <li class="divider"></li>
+          <li><a href="{% url 'logout' %}"><i class="icon-key"></i> خروج</a></li>
+        </ul>
+      </li>
+    </ul>
+    <form class="pull-left" >
+      <input type="search" placeholder="جستجو..." class="search" id="search-input">
+    </form>
+  </div>
+</div>
+<div class="wrapper">
+      <div class="left-nav" style="height:100vh">
+        <div id="side-nav">
+          <ul id="nav">
+            <li ><a href="#">تنظیمات سایت</a> </li>
+            <li ><a href="{%url 'cpanel'%}"> <i class="icon-dashboard"></i> داشبورد</a> </li>
+
+            <li> <a href="#"> <i class="icon-desktop"></i> اشعار <span class="label label-info pull-right"></span> <i class="arrow icon-angle-left"></i></a>
+              <ul class="sub-menu">
+                <li> <a href="{% url 'poem' %}"> <i class="icon-angle-right"></i> اضافه کردن شعر </a> </li>
+                <li> <a href="{% url 'poem_edit' %}"> <i class="icon-angle-right"></i> ادیت شعر </a> </li>
+              </ul>
+            </li>
+            </ul>
+        </div>
+      </div>
+  {% block content %}
+  {% endblock %}
+ </div>
+
+ <div class="bottom-nav footer"> 2017 &copy; Admin by SAMAREDUCATION. </div>
+
+{% endblock %}

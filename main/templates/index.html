@@ -1,0 +1,421 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+
+
+	<!--================ HEADER ================-->
+	<div class="preloader"></div>
+	<header class="malto-head">
+		<div class="head-bar">
+			<div class="container">
+				<div class="col-md-3 col-sm-3 col-xs-3">
+				<!--	<img src="{% static 'img/Full-logo.png' %}"  alt="">-->
+				</div>
+				<div class="col-md-9 col-sm-9 col-xs-">
+					<nav class="menu">
+						<i class="material-icons hidden-lg">منو</i>
+						<ul class="hidden visible-lg">
+							<!-- Change links -->
+							<!-- Example: <li class="menu-element"><a href="my-site.com">features</a></li> -->
+							<li class="menu-element"><a href="#features">صفحه اصلی</a></li>
+							<li class="menu-element"><a href="#team">شعر</a></li>
+							<li class="menu-element"><a href="#prices">لیست تمام شعر ها</a></li>
+							<li class="menu-element"><a href="#services">خدمات</a></li>
+							<li class="menu-element"><a href="#contacts">تماس ها</a></li>
+							<!--<li class="menu-element"><a href="#stats">آمار</a></li>
+							<li class="menu-element"><a href="#reviews">نقد و بررسی</a></li>
+							<li class="menu-element"><a href="#partners">همکاران</a></li>-->
+							
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="empty"></div>
+		<section id="features">
+		<div class="head-elements">
+			<div class="container">
+				<h1>به سایت شعر صالح استاد کنگ خوش آمدید.</h1>
+				<!--<h2>برای پیشرفت کاری رو که بلدی همیشه انجام نده!</h2>
+				 <!--<div  class="col-sm-7 wow fadeInRight" data-wow-duration="700ms">
+				 <img src="{% static 'img/png_butterfly_elegance__oceanic__by_ucurmi-d5nxeec.png' %}"  alt="">
+				 </div>
+				<div class="malto-btn" id="learn-btn"><a href="#features">بیشتر بدانید</a></div>
+				<div class="malto-btn accent"><a href="#features">خرید قالب</a></div>-->
+			</div>
+		</div>
+		</section>
+	</header>
+
+	<!--================ MOBILE MENU ================-->
+	<nav class="mobile-menu hidden-lg">
+		<ul>
+			<li class="menu-element"><a href="#features">صفحه اصلی</a></li>
+			<li class="menu-element"><a href="#team">شعر</a></li>
+			<li class="menu-element"><a href="#prices">لیست تمام شعر ها</a></li>
+			<li class="menu-element"><a href="#services">خدمات</a></li>
+			<li class="menu-element"><a href="#contacts">تماس ها</a></li>
+			<!--<li class="menu-element"><a href="#stats">آمار</a></li>
+			<li class="menu-element"><a href="#reviews">نقد و بررسی</a></li>
+			<li class="menu-element"><a href="#partners">همکاران</a></li>-->
+			
+		</ul>
+	</nav>
+
+	<!--================ FEATURES ================
+	<section id="features">
+		<div class="container">
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<i class="material-icons">devices</i>
+				<h3>طراحی متریال</h3>
+				<p class="item-descr">برای پیشرفت کاری رو که بلدی همیشه انجام نده!</p>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<i class="material-icons">subtitles</i>
+				<h3>فرم کاری</h3>
+				<p class="item-descr">برای پیشرفت کاری رو که بلدی همیشه انجام نده!</p>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<i class="material-icons">devices_other</i>
+				<h3>فوق العاده ریسپانسیو</h3>
+				<p class="item-descr">برای پیشرفت کاری رو که بلدی همیشه انجام نده!</p>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<i class="material-icons">rotate_left</i>
+				<h3>به روز رسانی رایگان</h3>
+				<p class="item-descr">برای پیشرفت کاری رو که بلدی همیشه انجام نده!</p>
+			</div>
+		</div>
+	</section>-->
+
+	
+
+	<!--================ STATS ================
+	<section id="stats">
+		<div class="container">
+			<div class="col-md-3 col-sm-3 col-xs-6">
+				<!-- Change icon 
+				<i class="material-icons">equalizer</i>
+				<span>119</span>
+				<p>صفحات فرود</p>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-6">
+				<!-- Change icon 
+				<i class="material-icons">equalizer</i>
+				<span>28</span>
+				<p>نقدهای عالی</p>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-6">
+				<!-- Change icon 
+				<i class="material-icons">equalizer</i>
+				<span>33</span>
+				<p>مشتریان راضی</p>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-6">
+				<!-- Change icon 
+				<i class="material-icons">equalizer</i>
+				<span>240</span>
+				<p>طراحی متریال</p>
+			</div>
+		</div>
+	</section>-->
+
+
+
+	<!--================ TEAM ================-->
+	<section id="team">
+		<div class="container">
+			<h4>شعر</h4>
+			<div class="owl-carousel team-members">
+			{%for i in poems %}
+			<div class="owl-item col-md-3">
+					<div class="member">
+						<div class="member-img">
+							<!-- Change the image -->
+							<img src="{{i.image.large.url}}"  alt="">
+						</div>
+						<div class="member-info ">
+							<a href="{% url 'poet' pk=i.pk %}" style="text-decoration: none;"><i>{{i.title}}</i></a>
+							<p>{{i.text|safe}}
+                            </p>
+						</div>
+						<div class="member-contacts">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter middle-icon"></i></a>
+							<a href="#"><i class="fa fa-google-plus last-icon"></i></a>
+						</div>
+					</div>
+			</div>
+			{%endfor%}
+			</div>
+		</div>
+	</section>
+		<!--================ PRICES ================-->
+	<section id="prices">
+		<div class="container">
+			<h4>لیست تمام شعرها</h4>
+		<div class="row">
+			<div class="col-md-4 ">
+				<div class="price-card  ">
+					<!--<div class="price-title">
+						<span>20 دلار /ماه</span>
+						<p>مجوز عمومی</p>
+					</div>-->
+					<div class="price-content ">
+						<ul>
+							<li><a href="" style="text-decoration: none;">خونیخمیرش</a></li>
+							<li><a href="" style="text-decoration: none;">بی دعوت</a></li>
+							<li><a href="" style="text-decoration: none;">ورغار ناتام</a></li>
+							<li><a href="" style="text-decoration: none;">کاش </a></li>
+							<li><a href="" style="text-decoration: none;">راه باریک</a></li>
+							<li><a href="" style="text-decoration: none;">البدر</a></li>
+							<li><a href="" style="text-decoration: none;">شمد سرشون </a></li>
+							
+							
+						</ul>
+						<!--<hr class="price-divider">
+						<div class="malto-btn btn-flat"><a href="">خرید</a></div>-->
+					</div>
+				</div>
+			</div>
+			
+			</div>
+		 </div>
+	</section>
+<!--================ SERVICES ================
+	<section id="services">
+		<div class="container">
+			<h4>خدمات</h4>
+			<!-- TABS --
+			<div class="tabs">
+				<ul class="nav nav-tabs" role="tablist" data-tabs="tabs">
+					<!-- Change tab titltes --
+					<li class="active"><a id="right-tab" href="#offers" data-toggle="tab">ارائه دهنده</a></li>
+					<li><a href="#mobile" data-toggle="tab">نمای تلفن همراه</a></li>
+					<li><a id="left-tab" href="#development" data-toggle="tab">توسعه دهنده</a></li>
+				</ul>
+			</div>
+			<!-- TABS CONTENT --
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane fade in active" id="offers">
+					<div class="col-md-5 col-md-offset-1 col-sm-6">
+						<div class="tab-title">
+							<span>بهترین شرایط</span>
+							<hr class="tab-divider">
+						</div>
+						<div class="tab-descr">
+							<p>لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.</p>
+							<ul class="tab-features">
+								<li>پشتیبانی 24/7 حرفه ای</li>
+								<li>طراحی تجربه ای کاربری مدرن</li>
+								<li>ایده آل برای هر دستگاه با طراحی پیکسل کامل</li>
+								<li>فقط چند دقیقه برای راه اندازی لازم است</li>
+							</ul>
+							<div class="malto-btn accent"><a href="#">خرید قالب</a></div>
+						</div>
+					</div>
+					<div class="col-md-6 hidden-xs">
+						<div class="iphone-img">
+							<!-- Changing tab image --
+							<img src="{% static 'img/maxresdefault.jpg' %}"  alt="">
+						</div>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="mobile">
+					<div class="col-md-5 col-md-offset-1 col-sm-6">
+						<div class="tab-title">
+							<span>نمای تلفن همراه</span>
+							<hr class="tab-divider">
+						</div>
+						<div class="tab-descr">
+							<p>لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.</p>
+							<ul class="tab-features">
+								<li>پشتیبانی 24/7 حرفه ای</li>
+								<li>طراحی تجربه ای کاربری مدرن</li>
+								<li>ایده آل برای هر دستگاه با طراحی پیکسل کامل</li>
+								<li>فقط چند دقیقه برای راه اندازی لازم است</li>
+							</ul>
+							<div class="malto-btn accent"><a href="#">خرید قالب</a></div>
+						</div>
+					</div>
+					<div class="col-md-6 hidden-xs">
+						<div class="iphone-img">
+							<!-- Changing tab image --
+							<img src="{% static 'img/iphone.png' %}"  alt="">
+						</div>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="development">
+					<div class="col-md-5 col-md-offset-1 col-sm-6">
+						<div class="tab-title">
+							<span>توسعه دهنده</span>
+							<hr class="tab-divider">
+						</div>
+						<div class="tab-descr">
+							<p>لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.</p>
+							<ul class="tab-features">
+								<li>پشتیبانی 24/7 حرفه ای</li>
+								<li>طراحی تجربه ای کاربری مدرن</li>
+								<li>ایده آل برای هر دستگاه با طراحی پیکسل کامل</li>
+								<li>فقط چند دقیقه برای راه اندازی لازم است</li>
+							</ul>
+							<div class="malto-btn accent"><a href="#">خرید قالب</a></div>
+						</div>
+					</div>
+					<div class="col-md-6 hidden-xs">
+						<div class="iphone-img">
+							<!-- Changing tab image
+							<img src="{% static 'img/iphone.png' %}"  alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+	<!--================ REVIEWS ================-->
+	<section id="reviews" class=" bg-images">
+		<div class="container">
+		<!--	<h4>کاربران ما چه فکر می کنن؟</h4>-->
+			<div class="owl-carousel" id="owl-review">
+				<div class="owl-item col-md-12 col-sm-12 col-xs-12">
+					<div class="review">
+						<!-- Change the image -->
+						<img src="{% static 'img/face.jpg' %}"  alt="">
+						<span>صالح الاستاد</span>
+						<i>شاعر</i>
+					<p>لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.</p>
+					</div>
+				</div>
+				<div class="owl-item col-md-12 col-sm-12 col-xs-12">
+					<div class="review">
+						<!-- Change the image -->
+						<img src="{% static 'img/face.jpg' %}"  alt="">
+						<span>صالح الاستاد</span>
+						<i>عکاس</i>
+						<p>لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.</p>
+					</div>
+				</div>
+				<div class="owl-item col-md-12 col-sm-12 col-xs-12">
+					<div class="review">
+						<!-- Change the image -->
+						<img src="{% static 'img/face.jpg' %}"  alt="">
+						<span>صالح الاستاد</span>
+						<i>مدیرعامل</i>
+						<p>لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--================ PARTNERS ================
+	<section id="partners">
+		<div class="container">
+			<div class="owl-carousel images">
+				<div class="owl-item col-md-3">
+					<!-- Change the image 
+					<img src="{% static 'img/Citibank.png' %}"  alt="">
+				</div>
+				<div class="owl-item col-md-3">
+					<!-- Change the image
+					<img src="{% static 'img/Microsoft.png' %}"  alt="">
+				</div>
+				<div class="owl-item col-md-3">
+					<!-- Change the image 
+					<img src="{% static 'img/Citibank.png' %}"  alt="">
+				</div>
+				<div class="owl-item col-md-3">
+					<!-- Change the image 
+					<img src="{% static 'img/Microsoft.png' %}"  alt="">
+				</div>
+				<div class="owl-item col-md-3">
+					<!-- Change the image
+					<img src="{% static 'img/Citibank.png' %}"  alt="">
+				</div>
+			</div>
+		</div>
+	</section>-->
+
+	<!--================ CONTACTS ================-->
+	<section id="contacts">
+		<div class="container">
+			<h4>تماس با ما</h4>
+			<div class="contact-items">
+				<div class="item col-md-3 col-sm-6 col-xs-12">
+					<span class="icon-wrap">
+						<!-- Change the icon -->
+						<i class="material-icons">place</i>
+					</span>
+					<span>کارنی، نبراسکا، ایالات متحده</span>
+				</div>
+				<div class="item col-md-3 col-sm-6 col-xs-12">
+					<span class="icon-wrap">
+						<!-- Change the icon -->
+						<i class="material-icons">phone_iphone</i>
+					</span>
+					<span>+0 123 456 789</span>
+				</div>
+				<div class="item col-md-3 col-sm-6 col-xs-12">
+					<span class="icon-wrap">
+						<!-- Change the icon -->
+						<i class="material-icons">email</i>
+					</span>
+					<span>alustademail@gmail.com</span>
+				</div>
+				<div class="item col-md-3 col-sm-6 col-xs-12">
+					<span class="icon-wrap">
+						<!-- Change the icon -->
+						<i class="material-icons">language</i>
+					</span>
+					<span>RTL-Theme.com</span>
+				</div>
+			</div>
+			<form class="malto-form" action="mail.php" method="POST">
+				<div class="col-md-6">
+					<input type="text" placeholder="نام" name="name" required><br>
+					<input type="email" placeholder="ایمیل" name="email" required>
+				</div>
+				<div class="col-md-6">
+					<textarea rows="4" placeholder="پیام" name="message" required></textarea>
+				</div>
+				<div class="col-md-12">
+					<button id="form-btn" class="malto-btn accent">ارسال پیام</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<!-- Google map 
+	<div id="map"></div>
+	<script type="text/javascript">
+		'use strict';
+		function initMap() {
+			var mapDiv = document.getElementById('map');
+			var map = new google.maps.Map(mapDiv, {
+				//Type here your coordinates
+				center: {lat: 40.7, lng: -99.08},
+				//Type here the zoom level
+				zoom: 15,
+				scrollwheel: false,
+				styles: [{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#e9e5dc"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"poi.medical","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"poi.sports_complex","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54},{"visibility":"off"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"water","elementType":"all","stylers":[{"saturation":43},{"lightness":-11},{"color":"#89cada"}]}]
+			});
+		}
+	</script>-->
+
+	<!--================ FOOTER ================-->
+	<footer class="malto-foot">
+		<div class="first-level">
+			<p>توسعه طراح وب-توسط آموزشگاه ثمر</p>
+			<a href=""><i class="fa fa-facebook"></i></a>
+			<a href=""><i class="fa fa-twitter"></i></a>
+			<a href=""><i class="fa fa-google-plus"></i></a>
+		</div>
+		<div class="second-level">
+			<p>کپی رایت 2016. کلیه حقوق محفوظ است</p>
+		</div>
+	</footer>
+	<div class="hidden"></div>
+
+{% endblock %}
+

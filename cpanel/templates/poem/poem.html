@@ -1,0 +1,40 @@
+{% extends 'main1.html' %}
+{% block content %}
+{%load staticfiles%}
+  <div class="page-content">
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="page-title">شعر</h2>
+        </div>
+        <div class="col-md-12 ">
+          <div class="widget">
+            <div class="widget-header"> <i class="icon-file-alt"></i>
+              <h3> اضافه کردن اشعار</h3>
+            </div>
+            <div class="widget-content">
+            {% if form.errors %}
+                <p>خطا در ورودی</p>
+                {% endif %}
+              <form data-validate="parsley" novalidate method="post" class="form-horizontal" enctype="multipart/form-data">{% csrf_token %}
+                <fieldset>
+
+                  <div class="control-group">
+                  <div class="col-md-9">
+                    {{ form.as_p }}
+                  </div>
+                 
+                </fieldset>
+                <div class="form-actions">
+                  <button class="btn btn-primary" type="submit">ثبت کردن</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}
+
